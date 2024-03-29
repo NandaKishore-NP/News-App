@@ -1,9 +1,14 @@
-import React from 'react'
+import { Alert } from "@mui/material";
+import React from "react";
 
-const ErrorAlert = () => {
+const ErrorAlert = ({ error }) => {
   return (
-    <div>ErrorAlert</div>
-  )
-}
+    error && (
+      <Alert variant="filled" severity="error">
+        {error}
+      </Alert>
+    )
+  );
+};
 
 export default ErrorAlert;
