@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 const cors = require("cors");
 const path = require("path");
 const app = express();
@@ -14,7 +14,7 @@ const Post = require("./models/Post");
 const bodyParser = require("body-parser");
 const FormData = require("./models/PosterSchema");
 const routers = require("./routes/Postrouter");
-dotenv.config();
+// dotenv.config();
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 const httpServer = require("http").createServer(app);
